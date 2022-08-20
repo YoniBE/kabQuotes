@@ -24,7 +24,7 @@ class InitData:
             for row in data:
                 if row:
                     temp = " ".join(row)
-                    if row[0][0] != "(":
+                    if temp[0] != "(":
                         quote = quote + "\n" + temp
                 else:
                     newdata["quote"].append(quote)
