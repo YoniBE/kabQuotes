@@ -20,10 +20,14 @@ def send_msg():
 
 schedule.every().day.at("09:00").do(send_msg)
 schedule.every().day.at("12:00").do(send_msg)
-schedule.every().day.at("17:00").do(send_msg)
+schedule.every().day.at("14:20").do(send_msg)
 schedule.every().day.at("20:00").do(send_msg)
 
-#schedule.every(5).seconds.do(send_msg)
+# ----- For Debugging -------#
+
+# schedule.every(5).seconds.do(send_msg)
+
+# ----------------------------#
 
 while True:
     schedule.run_pending()
