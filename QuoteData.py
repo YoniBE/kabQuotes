@@ -25,6 +25,9 @@ class InitData:
                 if row:
                     temp = " ".join(row)
                     if temp[0] != "(":
+                        for _ in range(5):
+                            if temp[0].isdigit() or temp[0] == ".":
+                                temp = temp.replace(temp[0], "")
                         quote = quote + "\n" + temp
                 else:
                     newdata["quote"].append(quote)
