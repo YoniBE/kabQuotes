@@ -11,6 +11,7 @@ chat_id = bot_chat_id
 test_chat_id = bot_test_chat_id
 
 def send_msg():
+    update_data()
     data = QuoteData.load_json_data("database.json")
     quote_number = len(data["quote"])
     random_index = random.sample(list(range(quote_number)), 1)[0]
